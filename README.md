@@ -1,2 +1,3 @@
-# system-design-toolkit
-Implementations of common system design algorithms and concepts
+# System Design Toolkit
+
+Implementations of common system design algorithms and concepts.
