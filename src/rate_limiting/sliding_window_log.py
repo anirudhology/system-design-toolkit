@@ -3,10 +3,10 @@ from collections import deque
 from threading import Lock
 
 
-class SlidingWindowCounter:
+class SlidingWindowLog:
     def __init__(self, max_allowed_requests: int, window_size: float):
         """
-        Initialize Sliding Window Counter
+        Initialize Sliding Window Log
         :param max_allowed_requests: maximum allowed request for a window
         :param window_size: size of the time window
         """

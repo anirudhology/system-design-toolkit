@@ -1,6 +1,6 @@
 import time
 
-from src.rate_limiting.sliding_window_counter import SlidingWindowCounter
+from src.rate_limiting.sliding_window_log import SlidingWindowLog
 
 
 def simulate_requests(counter, num_requests, delay=0):
@@ -23,11 +23,11 @@ def simulate_requests(counter, num_requests, delay=0):
 def main():
     print("Scenario 1: Basic rate limiting")
     # Allow 5 requests per second
-    counter = SlidingWindowCounter(max_allowed_requests=5, window_size=1.0)
+    counter = SlidingWindowLog(max_allowed_requests=5, window_size=1.0)
     simulate_requests(counter, 10)
 
     print("\nScenario 2: Requests over time")
-    counter = SlidingWindowCounter(max_allowed_requests=5, window_size=1.0)
+    counter = SlidingWindowLog(max_allowed_requests=5, window_size=1.0)
     for i in range(15):
         if i % 5 == 0 and i > 0:
             print(f"Waiting for 1 second... (Current time: {time.time():.2f})")
@@ -39,7 +39,7 @@ def main():
     print("Final stats:", counter.get_stats())
 
     print("\nScenario 3: Reset functionality")
-    counter = SlidingWindowCounter(max_allowed_requests=5, window_size=1.0)
+    counter = SlidingWindowLog(max_allowed_requests=5, window_size=1.0)
     simulate_requests(counter, 5)
     print("Resetting counter...")
     counter.reset()
