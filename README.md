@@ -7,7 +7,7 @@ Implementations of common system design algorithms and concepts.
 | S. No. | Category      | Sub category | Implementation link to file                       | Link to usage script                                                  |
 |--------|---------------|--------------|---------------------------------------------------|-----------------------------------------------------------------------|
 | 1      | Rate Limiting | Token Bucket | [Token Bucket](src/rate_limiting/token_bucket.py) | [Token Bucket Usage](usage/rate_limiting_usage/token_bucket_usage.py) |
-|        |               |              |                                                   |                                                                       |
+|        |               | Leaky Bucket | [Leaky Bucket](src/rate_limiting/leaky_bucket.py) | [Leaky Bucket Usage](usage/rate_limiting_usage/leaky_bucket_usage.py) |
 | 2      | Caching       |              |                                                   |                                                                       |
 |        |               |              |                                                   |                                                                       |
 | 3      | Bloom Filters |              |                                                   |                                                                       |
